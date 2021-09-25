@@ -2,6 +2,7 @@
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;
 using Application = Microsoft.Maui.Controls.Application;
+using System.Windows.Input;
 
 namespace Guard.GUI
 {
@@ -12,6 +13,7 @@ namespace Guard.GUI
             InitializeComponent();
 
             MainPage = new MainPage();
+            BindingContext = new CounterViewModel();
         }
     }
 }
