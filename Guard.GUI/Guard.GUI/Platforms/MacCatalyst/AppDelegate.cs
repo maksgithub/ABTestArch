@@ -1,7 +1,7 @@
 ﻿using Foundation;
 using Microsoft.Maui;
 
-namespace MauiApp1
+namespace Guard.GUI
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace MauiApp1
+namespace Guard.GUI
 {
     public class Program
     {

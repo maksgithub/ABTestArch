@@ -2,7 +2,7 @@
 using Microsoft.Maui.Essentials;
 using System;
 
-namespace MauiApp1
+namespace Guard.GUI
 {
     public partial class MainPage : ContentPage
     {

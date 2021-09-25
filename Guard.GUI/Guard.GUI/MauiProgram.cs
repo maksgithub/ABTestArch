@@ -3,7 +3,7 @@ using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 
-namespace MauiApp1
+namespace Guard.GUI
 {
     public static class MauiProgram
     {
