@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:fullVersion="clr-namespace:Guard.VisualStates.FullVersion;assembly=Guard.VisualStates">
+                    xmlns:fullVersion="clr-namespace:Guard.VisualStates.FullVersion;assembly=Guard.VisualStates"
+                    xmlns:visualStates="clr-namespace:Guard.VisualStates;assembly=Guard.VisualStates">
     <DataTemplate DataType="{x:Type fullVersion:FullVersionLayoutViewModel}">
         <Grid>
             <Grid.RowDefinitions>
@@ -18,6 +19,14 @@
                 <ContentControl Content="{Binding MiddlePanel}" Grid.Column="1" Background="Aqua"/>
             </Grid>
             <ContentControl Content="{Binding FooterPanel}" Grid.Row="2" Background="Aquamarine"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
+        <Grid Background="{Binding Background}">
+            <TextBlock Text="{Binding Description}" 
+                       FontSize="18"
+                       Foreground="White" />
         </Grid>
     </DataTemplate>
 </ResourceDictionary>

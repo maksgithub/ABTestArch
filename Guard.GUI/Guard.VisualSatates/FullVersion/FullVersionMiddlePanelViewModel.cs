@@ -2,7 +2,7 @@
 
 namespace Guard.VisualStates.FullVersion
 {
-    public class FullVersionMiddlePanelViewModel : IAppLayout
+    public class FullVersionMiddlePanelViewModel : BaseViewModel, IAppLayout
     {
     }
 }
