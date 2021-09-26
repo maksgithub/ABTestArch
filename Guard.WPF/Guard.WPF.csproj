@@ -5,7 +5,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Guard.GUI\Guard.WPF.VisualStates\Guard.WPF.VisualStates.csproj" />
   </ItemGroup>

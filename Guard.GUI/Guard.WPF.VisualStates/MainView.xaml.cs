@@ -24,7 +24,6 @@ namespace Guard.WPF.VisualStates
         public MainView()
         {
             InitializeComponent();
-            DataContext = new MainViewModel(new AppLayoutManager());
         }
     }
 }
