@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:fullVersion="clr-namespace:Guard.VisualStates.FullVersion;assembly=Guard.VisualStates">
+    <DataTemplate DataType="{x:Type fullVersion:FullVersionLayoutViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <ContentControl Content="{Binding TopBar}" Background="Red"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ContentControl Content="{Binding LeftPanel}" Background="Gold"/>
+                <ContentControl Content="{Binding MiddlePanel}" Grid.Column="1" Background="Aqua"/>
+            </Grid>
+            <ContentControl Content="{Binding FooterPanel}" Grid.Row="2" Background="Aquamarine"/>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>
