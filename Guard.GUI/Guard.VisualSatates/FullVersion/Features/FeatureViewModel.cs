@@ -1,4 +1,4 @@
-﻿using Guard.Models.Features;
+﻿using Guard.BL.Features;
 
 namespace Guard.VisualStates.FullVersion.Features
 {

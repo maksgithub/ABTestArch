@@ -1,13 +1,13 @@
-﻿using Guard.Infrastructure;
-using Guard.Models;
+﻿using Guard.BL.Models;
+using Guard.Infrastructure;
 
 namespace Guard.VisualStates.FullVersion
 {
     public class FullVersionLayoutViewModel : BaseViewModel, IAppLayout
     {
-        private readonly LeftPanelModel _leftPanelModel;
+        private readonly ILeftPanelModel _leftPanelModel;
 
-        public FullVersionLayoutViewModel(LeftPanelModel leftPanelModel)
+        public FullVersionLayoutViewModel(ILeftPanelModel leftPanelModel)
         {
             _leftPanelModel = leftPanelModel;
         }

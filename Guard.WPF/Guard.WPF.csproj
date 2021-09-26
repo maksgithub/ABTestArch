@@ -6,6 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Guard.GUI\Guard.BL\Guard.BL.csproj" />
+    <ProjectReference Include="..\Guard.GUI\Guard.Models\Guard.Models.csproj" />
     <ProjectReference Include="..\Guard.GUI\Guard.WPF.VisualStates\Guard.WPF.VisualStates.csproj" />
   </ItemGroup>
 

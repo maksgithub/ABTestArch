@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Guard.Infrastructure\Guard.Infrastructure.csproj" />
-    <ProjectReference Include="..\Guard.Models\Guard.Models.csproj" />
+    <ProjectReference Include="..\Guard.BL\Guard.BL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

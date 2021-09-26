@@ -6,7 +6,6 @@
              xmlns:local="clr-namespace:Guard.WPF.VisualStates"
              mc:Ignorable="d"
              xmlns:prism="http://prismlibrary.com/"
-             xmlns:wpf="clr-namespace:Common.WPF;assembly=Common.WPF"
              xmlns:enums="clr-namespace:Guard.Infrastructure;assembly=Guard.Infrastructure"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -25,7 +24,7 @@
             DisplayMemberPath="Name"
                    Width="200"
                    Height="20">
-         
+
         </ComboBox>
         <ContentControl Content="{Binding MainContent}" 
                         VerticalAlignment="Stretch"

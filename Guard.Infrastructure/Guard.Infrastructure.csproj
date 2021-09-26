@@ -8,4 +8,9 @@
     <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Account\" />
+    <Folder Include="Models\LayoutModels\" />
+  </ItemGroup>
+
 </Project>

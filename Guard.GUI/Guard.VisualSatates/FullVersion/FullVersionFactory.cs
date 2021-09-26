@@ -1,18 +1,19 @@
-﻿using Guard.Infrastructure;
-using Guard.Models;
+﻿using Guard.BL.Factories;
+using Guard.BL.Models;
+using Guard.Infrastructure;
 
 namespace Guard.VisualStates.FullVersion
 {
-    public class FullVersionFactory
+    public class FullVersionFactory : IFullVersionLayoutFactory
     {
-        private readonly LeftPanelModel _leftPanelModel;
+        private readonly ILeftPanelModel _leftPanelModel;
 
-        public FullVersionFactory(LeftPanelModel leftPanelModel)
+        public FullVersionFactory(ILeftPanelModel leftPanelModel)
         {
             _leftPanelModel = leftPanelModel;
         }
 
-        public IAppLayout CreateFullVersionLayout()
+        public IAppLayout CreateLayout()
         {
             return new FullVersionLayoutViewModel(_leftPanelModel);
         }

@@ -1,10 +1,7 @@
-﻿namespace Guard.Models.Features
-{
-    public interface IFeature
-    {
-        string Name { get; }
-    }
+﻿using Guard.BL.Features;
 
+namespace Guard.Models.Features
+{
     class Feature : IFeature
     {
         public string Name { get; }

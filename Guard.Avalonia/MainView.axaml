@@ -1,0 +1,139 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:main="clr-namespace:Guard.VisualStates.Main;assembly=Guard.VisualStates"
+             xmlns:fullVersion="clr-namespace:Guard.VisualStates.FullVersion;assembly=Guard.VisualStates"
+             xmlns:visualStates="clr-namespace:Guard.VisualStates;assembly=Guard.VisualStates"
+             xmlns:features="clr-namespace:Guard.VisualStates.FullVersion.Features;assembly=Guard.VisualStates"
+             xmlns:trial="clr-namespace:Guard.VisualStates.TrialVersion;assembly=Guard.VisualStates"
+             xmlns:onboarding="clr-namespace:Guard.VisualStates.Onboarding;assembly=Guard.VisualStates"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Guard.Avalonia.MainView">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source='/ResourceDictionary1.axaml'/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="200"/>
+		</Grid.RowDefinitions>
+		<ComboBox
+            Items="{Binding Path=States}"
+            SelectedItem="{Binding CurrentState}"
+            Width="300"
+            Height="30">
+			<ComboBox.ItemTemplate>
+				<DataTemplate DataType="{x:Type main:MenuItem}">
+					<TextBlock Text="{Binding Name}"/>
+				</DataTemplate>
+			</ComboBox.ItemTemplate>
+		</ComboBox>
+		<ContentControl Content="{Binding MainContent}"
+                        VerticalAlignment="Stretch"
+                        Grid.Row="1">
+			<ContentControl.DataTemplates>
+                <!--<DataTemplate DataType="{x:Type fullVersion:FullVersionLeftPanelViewModel}">
+                    <Border BorderBrush="Black"
+                            BorderThickness="2"
+                            Height="200"
+                            Margin="2">
+                        <ItemsControl Items="{Binding Features}">
+                            <DataTemplate  DataType="{x:Type features:FeatureViewModel}">
+                                <TextBlock Text="{Binding Name}"
+                                           FontSize="20"/>
+                            </DataTemplate>
+                        </ItemsControl>
+                    </Border>
+                </DataTemplate>-->
+
+
+                <DataTemplate DataType="{x:Type fullVersion:FullVersionLayoutViewModel}">
+					<Grid VerticalAlignment="Stretch">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="100" />
+							<RowDefinition Height="*" />
+							<RowDefinition Height="100" />
+						</Grid.RowDefinitions>
+						<ContentControl Content="{Binding TopBar}" />
+						<Grid Grid.Row="1">
+							<Grid.DataTemplates>
+                                <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
+                                    <Border BorderBrush="Black"
+                                            BorderThickness="2"
+                                            Margin="2">
+                                        <TextBlock Text="{Binding Description}"
+                                                   Margin="5"
+                                                   FontSize="18"
+                                                   Foreground="Black" />
+                                    </Border>
+                                </DataTemplate>
+                            </Grid.DataTemplates>
+                            <Grid.ColumnDefinitions>
+								<ColumnDefinition Width="200" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<ContentControl Content="{Binding LeftPanel}" >
+								<ContentControl.DataTemplates>
+                                    <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
+                                        <Border BorderBrush="Black"
+                                                BorderThickness="2"
+                                                Margin="2">
+                                            <TextBlock Text="{Binding Description}"
+                                                       Margin="5"
+                                                       FontSize="18"
+                                                       Foreground="Black" />
+                                        </Border>
+                                    </DataTemplate>
+                                </ContentControl.DataTemplates>
+                            </ContentControl>
+							<ContentControl Content="{Binding MiddlePanel}" Grid.Column="1" />
+						</Grid>
+						<ContentControl Content="{Binding FooterPanel}" Grid.Row="2" />
+					</Grid>
+				</DataTemplate>
+
+                <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
+                    <Border BorderBrush="Black"
+                            BorderThickness="2"
+                            Margin="2">
+                        <TextBlock Text="{Binding Description}"
+                                   Margin="5"
+                                   FontSize="18"
+                                   Foreground="Black" />
+                    </Border>
+                </DataTemplate>
+
+
+                <DataTemplate DataType="{x:Type trial:TrialVersionLeftPanelViewModel}">
+					<Border BorderBrush="Black"
+							BorderThickness="2"
+							Margin="2">
+						<ListBox Items ="{Binding Features}">
+							<ListBox>
+								<DataTemplate DataType="{x:Type features:VpnFeatureViewModel}">
+									<TextBlock Text="{Binding Name}"
+											   Foreground="Red"
+											   IsEnabled="False"
+											   FontSize="20"/>
+								</DataTemplate>
+								<DataTemplate DataType="{x:Type features:FeatureViewModel}">
+									<TextBlock Text="{Binding Name}"
+											   FontSize="20"/>
+								</DataTemplate>
+							</ListBox>
+						</ListBox>
+					</Border>
+				</DataTemplate>
+
+                <DataTemplate DataType="{x:Type onboarding:OnboardingLayotViewModel}">
+                    <Grid Background="{Binding Background}"/>
+                </DataTemplate>
+			</ContentControl.DataTemplates>
+		</ContentControl>
+	</Grid>
+</UserControl>
