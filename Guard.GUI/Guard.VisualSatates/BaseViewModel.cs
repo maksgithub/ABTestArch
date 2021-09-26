@@ -1,8 +1,9 @@
 ﻿using System;
+using Prism.Mvvm;
 
 namespace Guard.VisualStates
 {
-    public abstract class BaseViewModel
+    public abstract class BaseViewModel : BindableBase
     {
         public string Background { get; }
         public string Description => $"{GetType().Name}".Replace("ViewModel", "");

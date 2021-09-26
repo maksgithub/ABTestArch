@@ -1,7 +1,19 @@
-﻿namespace Guard.Infrastructure
+﻿using System;
+
+namespace Guard.Infrastructure
 {
     public interface IAppLayoutManager
     {
-        public IAppLayout GetLayout();
+        event Action<IAppLayout> CurrentLayoutChanged;
+
+        public void SetContext(LayoutState state);
+        public IAppLayout GetCurrentLayout();
+    }
+
+    public enum LayoutState
+    {
+        TrialVersion,
+        FullVersion,
+        Onboarding
     }
 }

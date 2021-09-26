@@ -1,15 +1,34 @@
 ﻿<UserControl x:Class="Guard.WPF.VisualStates.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:Guard.WPF.VisualStates"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:wpf="clr-namespace:Common.WPF;assembly=Common.WPF"
+             xmlns:enums="clr-namespace:Guard.Infrastructure;assembly=Guard.Infrastructure"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
-        <ResourceDictionary Source="pack://application:,,,/Guard.WPF.VisualStates;component/DataTemplates/FullVersionDataTemplates.xaml"/>
+        <ResourceDictionary
+            Source="pack://application:,,,/Guard.WPF.VisualStates;component/DataTemplates/FullVersionDataTemplates.xaml" />
     </UserControl.Resources>
-    <ContentControl Content="{Binding MainContent}"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+        <ComboBox 
+            ItemsSource="{Binding Path=States}"    
+            SelectedItem="{Binding CurrentState}"
+            DisplayMemberPath="Name"
+                   Width="200"
+                   Height="20">
+         
+        </ComboBox>
+        <ContentControl Content="{Binding MainContent}" 
+                        VerticalAlignment="Stretch"
+                        Grid.Row="1"/>
+    </Grid>
 </UserControl>

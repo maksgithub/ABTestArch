@@ -6,10 +6,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Guard.Infrastructure\Guard.Infrastructure.csproj" />
+    <ProjectReference Include="..\Guard.Models\Guard.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Main\" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
   </ItemGroup>
 
 </Project>
