@@ -15,13 +15,6 @@ namespace Guard.Avalonia
         public MainView()
         {
             InitializeComponent();
-            var leftPanelModel = new LeftPanelModel();
-            var fullVersionLayoutFactory = new FullVersionFactory(leftPanelModel);
-            var trialVersionFactory = new TrialVersionFactory(leftPanelModel);
-            var appLayoutManager = new AppLayoutManager(fullVersionLayoutFactory, 
-                trialVersionFactory,
-                new OnboardingLayoutFactory());
-            DataContext = new MainViewModel(appLayoutManager);
         }
 
         private void InitializeComponent()

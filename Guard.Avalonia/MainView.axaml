@@ -7,6 +7,7 @@
              xmlns:visualStates="clr-namespace:Guard.VisualStates;assembly=Guard.VisualStates"
              xmlns:features="clr-namespace:Guard.VisualStates.FullVersion.Features;assembly=Guard.VisualStates"
              xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:trial="clr-namespace:Guard.VisualStates.TrialVersion;assembly=Guard.VisualStates"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Guard.Avalonia.MainView">
