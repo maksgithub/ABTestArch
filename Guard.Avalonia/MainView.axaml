@@ -6,6 +6,8 @@
              xmlns:fullVersion="clr-namespace:Guard.VisualStates.FullVersion;assembly=Guard.VisualStates"
              xmlns:visualStates="clr-namespace:Guard.VisualStates;assembly=Guard.VisualStates"
              xmlns:features="clr-namespace:Guard.VisualStates.FullVersion.Features;assembly=Guard.VisualStates"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:trial="clr-namespace:Guard.VisualStates.TrialVersion;assembly=Guard.VisualStates"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Guard.Avalonia.MainView">
 	<UserControl.Resources>
@@ -55,20 +57,41 @@
 					</Grid>
 				</DataTemplate>
 
-                <!--<DataTemplate DataType="{x:Type fullVersion:FullVersionLeftPanelViewModel}">
+                <DataTemplate DataType="{x:Type trial:TrialVersionLeftPanelViewModel}">
                     <Border BorderBrush="Black"
                             BorderThickness="2"
                             Margin="2">
-                        <ItemsControl Items="{Binding Features}">
-                            <ItemsControl>
+                        <ListBox Items="{Binding Features}">
+                            <ListBox.DataTemplates>
+                                <DataTemplate DataType="{x:Type features:VpnFeatureViewModel}">
+                                    <TextBlock Text="{Binding Name}"
+                                               Foreground="Red"
+                                               IsEnabled="False"
+                                               FontSize="20"/>
+                                </DataTemplate>
                                 <DataTemplate DataType="{x:Type features:FeatureViewModel}">
                                     <TextBlock Text="{Binding Name}"
                                                FontSize="20"/>
                                 </DataTemplate>
-                            </ItemsControl>
-                        </ItemsControl>
+                            </ListBox.DataTemplates>
+                        </ListBox>
                     </Border>
-                </DataTemplate>-->
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type fullVersion:FullVersionLeftPanelViewModel}">
+                    <Border BorderBrush="Black"
+                            BorderThickness="2"
+                            Margin="2">
+                        <ListBox Items="{Binding Features}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate DataType="{x:Type features:FeatureViewModel}">
+                                    <TextBlock Text="{Binding Name}"
+                                               FontSize="20"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Border>
+                </DataTemplate>
 
                 <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
                     <Border BorderBrush="Black"
