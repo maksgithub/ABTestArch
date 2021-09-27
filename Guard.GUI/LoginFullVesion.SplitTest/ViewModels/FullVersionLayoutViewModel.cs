@@ -3,7 +3,7 @@ using Guard.Infrastructure;
 using LoginFullVersion.SplitTest.AppLayout;
 using Prism.Commands;
 
-namespace LoginFullVersion.SplitTest.Layouts
+namespace LoginFullVersion.SplitTest.ViewModels
 {
     public class FullVersionLayoutViewModel : IAppLayout
     {

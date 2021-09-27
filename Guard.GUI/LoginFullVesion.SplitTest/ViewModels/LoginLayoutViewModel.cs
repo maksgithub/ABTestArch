@@ -4,7 +4,7 @@ using LoginFullVersion.SplitTest.AppLayout;
 using Prism.Commands;
 using Prism.Mvvm;
 
-namespace LoginFullVersion.SplitTest.Layouts
+namespace LoginFullVersion.SplitTest.ViewModels
 {
     public class LoginLayoutViewModel : BindableBase, IAppLayout
     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using Guard.Infrastructure;
 using LoginFullVersion.SplitTest.AppLayout;
+using LoginFullVersion.SplitTest.ViewModels;
 
 namespace LoginFullVersion.SplitTest.Layouts.LayoutsFactory
 {
