@@ -6,8 +6,6 @@
              xmlns:fullVersion="clr-namespace:Guard.VisualStates.FullVersion;assembly=Guard.VisualStates"
              xmlns:visualStates="clr-namespace:Guard.VisualStates;assembly=Guard.VisualStates"
              xmlns:features="clr-namespace:Guard.VisualStates.FullVersion.Features;assembly=Guard.VisualStates"
-             xmlns:trial="clr-namespace:Guard.VisualStates.TrialVersion;assembly=Guard.VisualStates"
-             xmlns:onboarding="clr-namespace:Guard.VisualStates.Onboarding;assembly=Guard.VisualStates"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Guard.Avalonia.MainView">
 	<UserControl.Resources>
@@ -20,7 +18,7 @@
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="200"/>
+			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		<ComboBox
             Items="{Binding Path=States}"
@@ -37,7 +35,42 @@
                         VerticalAlignment="Stretch"
                         Grid.Row="1">
 			<ContentControl.DataTemplates>
-                <!-- <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
+                <DataTemplate DataType="{x:Type fullVersion:FullVersionLayoutViewModel}">
+					<Grid VerticalAlignment="Stretch">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="100" />
+							<RowDefinition Height="*" />
+							<RowDefinition Height="100" />
+						</Grid.RowDefinitions>
+						<ContentControl Content="{Binding TopBar}" />
+						<Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+								<ColumnDefinition Width="200" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<ContentControl Content="{Binding LeftPanel}" />
+							<ContentControl Content="{Binding MiddlePanel}" Grid.Column="1"  />
+						</Grid>
+						<ContentControl Content="{Binding FooterPanel}" Grid.Row="2" />
+					</Grid>
+				</DataTemplate>
+
+                <!--<DataTemplate DataType="{x:Type fullVersion:FullVersionLeftPanelViewModel}">
+                    <Border BorderBrush="Black"
+                            BorderThickness="2"
+                            Margin="2">
+                        <ItemsControl Items="{Binding Features}">
+                            <ItemsControl>
+                                <DataTemplate DataType="{x:Type features:FeatureViewModel}">
+                                    <TextBlock Text="{Binding Name}"
+                                               FontSize="20"/>
+                                </DataTemplate>
+                            </ItemsControl>
+                        </ItemsControl>
+                    </Border>
+                </DataTemplate>-->
+
+                <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
                     <Border BorderBrush="Black"
                             BorderThickness="2"
                             Margin="2">
@@ -46,31 +79,10 @@
                                    FontSize="18"
                                    Foreground="Black" />
                     </Border>
-                </DataTemplate>-->
+                </DataTemplate>
 
 
-                <DataTemplate DataType="{x:Type fullVersion:FullVersionLayoutViewModel}">
-					<Grid VerticalAlignment="Stretch">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="100" />
-							<RowDefinition Height="*" />
-							<RowDefinition Height="100" />
-						</Grid.RowDefinitions>
-						<ContentControl Content="{Binding TopBar}" Background="Red"/>
-						<Grid Grid.Row="1">
-                            <Grid.ColumnDefinitions>
-								<ColumnDefinition Width="200" />
-								<ColumnDefinition Width="*" />
-							</Grid.ColumnDefinitions>
-							<ContentControl Content="{Binding LeftPanel}" Background="Green"/>
-							<ContentControl Content="{Binding MiddlePanel}" Grid.Column="1" Background="Blue" />
-						</Grid>
-						<ContentControl Content="{Binding FooterPanel}" Grid.Row="2" Background="Blue" />
-					</Grid>
-				</DataTemplate>
-
-               
-			</ContentControl.DataTemplates>
+            </ContentControl.DataTemplates>
 		</ContentControl>
 	</Grid>
 </UserControl>
