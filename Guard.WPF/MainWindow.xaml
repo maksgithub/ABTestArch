@@ -10,7 +10,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <ResourceDictionary 
-            Source="pack://application:,,,/LoginFullVersion.DataTemplates;component/LoginDataTemplates.xaml" />
+            Source="pack://application:,,,/Split.DataTemplates;component/LoginFullVersion.xaml" />
     </Window.Resources>
     <ContentControl Content="{Binding MainContent}"/>
 </Window>

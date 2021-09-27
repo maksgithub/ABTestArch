@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guard.WPF", "..\Guard.WPF\G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI.WPF", "UI.WPF", "{2A99DD87-F17A-4810-9926-07B8DF9ADC7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.WPF", "Common.WPF\Common.WPF.csproj", "{01E31E16-6E96-47A4-92A4-200518BB6E0B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{7F42251B-DE58-4FEC-B9F7-0E54A39CE32B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guard.Models", "Guard.Models\Guard.Models.csproj", "{7BC2DDD1-7CDB-49B5-BFB9-AEE74B1E4574}"
@@ -33,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginFullVersion.SplitTest"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SplitTests.UI", "SplitTests.UI", "{58E2FBC0-3D82-4C21-A71B-3AE9B619BE49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginFullVersion.DataTemplates", "LoginFullVersion.DataTemplates\LoginFullVersion.DataTemplates.csproj", "{7614D8B1-EED7-41D4-AE93-A19C4C6B9B74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Split.DataTemplates", "LoginFullVersion.DataTemplates\Split.DataTemplates.csproj", "{7614D8B1-EED7-41D4-AE93-A19C4C6B9B74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard.ViewModels", "Guard.ViewModels\Guard.ViewModels.csproj", "{9AC6A718-66D4-42C9-88B2-A53C131FA46D}"
 EndProject
@@ -51,10 +49,6 @@ Global
 		{F41F31C5-3F64-41B1-8735-7F75CCEE4900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F41F31C5-3F64-41B1-8735-7F75CCEE4900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F41F31C5-3F64-41B1-8735-7F75CCEE4900}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01E31E16-6E96-47A4-92A4-200518BB6E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01E31E16-6E96-47A4-92A4-200518BB6E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01E31E16-6E96-47A4-92A4-200518BB6E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01E31E16-6E96-47A4-92A4-200518BB6E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7BC2DDD1-7CDB-49B5-BFB9-AEE74B1E4574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BC2DDD1-7CDB-49B5-BFB9-AEE74B1E4574}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BC2DDD1-7CDB-49B5-BFB9-AEE74B1E4574}.Release|Any CPU.ActiveCfg = Release|Any CPU
