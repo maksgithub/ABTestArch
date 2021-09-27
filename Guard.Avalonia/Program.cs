@@ -7,11 +7,8 @@ using Guard.BL.Factories;
 using Guard.BL.Models;
 using Guard.Infrastructure;
 using Guard.Models;
-using Guard.VisualStates.FullVersion;
-using Guard.VisualStates.Main;
-using Guard.VisualStates.Onboarding;
-using Guard.VisualStates.TrialVersion.Factories;
 using Prism.Mvvm;
+using SplitTest.Common.Base.ViewModels;
 using Unity;
 
 namespace Guard.Avalonia
@@ -24,12 +21,6 @@ namespace Guard.Avalonia
         public static void Main(string[] args)
         {
             var unityContainer = new UnityContainer();
-            unityContainer.RegisterSingleton<IAppLayoutManager, AppLayoutManager>();
-            unityContainer.RegisterSingleton<MainViewModel>();
-            unityContainer.RegisterSingleton<ITrialLayoutFactory, TrialVersionFactory>();
-            unityContainer.RegisterSingleton<ILeftPanelModel, LeftPanelModel>();
-            unityContainer.RegisterSingleton<IFullVersionLayoutFactory, FullVersionFactory>();
-            unityContainer.RegisterSingleton<IOnboardingLayoutFactory, OnboardingLayoutFactory>();
 
             ViewModelLocationProvider.Register<MainView>(() => unityContainer.Resolve<MainViewModel>());
             BuildAvaloniaApp()

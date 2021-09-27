@@ -1,12 +1,5 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Guard.BL;
-using Guard.Models;
-using Guard.VisualStates.FullVersion;
-using Guard.VisualStates.Main;
-using Guard.VisualStates.Onboarding;
-using Guard.VisualStates.TrialVersion.Factories;
 
 namespace Guard.Avalonia
 {

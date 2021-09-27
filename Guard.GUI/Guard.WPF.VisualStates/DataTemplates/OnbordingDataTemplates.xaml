@@ -1,7 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:visualStates="clr-namespace:Guard.VisualStates.Onboarding;assembly=Guard.VisualStates">
-    <DataTemplate DataType="{x:Type visualStates:OnboardingLayotViewModel}">
-        <Grid Background="{Binding Background}"/>
-    </DataTemplate>
-</ResourceDictionary>

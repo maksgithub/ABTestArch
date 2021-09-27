@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:layouts="clr-namespace:LoginFullVersion.SplitTest.Layouts;assembly=LoginFullVersion.SplitTest">
+    <DataTemplate DataType="{x:Type layouts:LoginLayoutViewModel}">
+        <Border Width="200" Height="200"
+                Background="Gray">
+            <Button Command="{Binding LoginCommand}" 
+                    Width="200" Height="30">Login</Button>
+        </Border>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type layouts:FullVersionLayoutViewModel}">
+        <Border Width="200" Height="200"
+                Background="Gray">
+            <Button Command="{Binding ExitAccountCommand}"
+                    Width="200"
+                    Height="30">Exit Account</Button>
+        </Border>
+    </DataTemplate>
+    
+</ResourceDictionary>
