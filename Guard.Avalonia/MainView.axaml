@@ -37,17 +37,14 @@
                         VerticalAlignment="Stretch"
                         Grid.Row="1">
 			<ContentControl.DataTemplates>
-                <!--<DataTemplate DataType="{x:Type fullVersion:FullVersionLeftPanelViewModel}">
+                <!-- <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
                     <Border BorderBrush="Black"
                             BorderThickness="2"
-                            Height="200"
                             Margin="2">
-                        <ItemsControl Items="{Binding Features}">
-                            <DataTemplate  DataType="{x:Type features:FeatureViewModel}">
-                                <TextBlock Text="{Binding Name}"
-                                           FontSize="20"/>
-                            </DataTemplate>
-                        </ItemsControl>
+                        <TextBlock Text="{Binding Description}"
+                                   Margin="5"
+                                   FontSize="18"
+                                   Foreground="Black" />
                     </Border>
                 </DataTemplate>-->
 
@@ -59,80 +56,20 @@
 							<RowDefinition Height="*" />
 							<RowDefinition Height="100" />
 						</Grid.RowDefinitions>
-						<ContentControl Content="{Binding TopBar}" />
+						<ContentControl Content="{Binding TopBar}" Background="Red"/>
 						<Grid Grid.Row="1">
-							<Grid.DataTemplates>
-                                <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
-                                    <Border BorderBrush="Black"
-                                            BorderThickness="2"
-                                            Margin="2">
-                                        <TextBlock Text="{Binding Description}"
-                                                   Margin="5"
-                                                   FontSize="18"
-                                                   Foreground="Black" />
-                                    </Border>
-                                </DataTemplate>
-                            </Grid.DataTemplates>
                             <Grid.ColumnDefinitions>
 								<ColumnDefinition Width="200" />
 								<ColumnDefinition Width="*" />
 							</Grid.ColumnDefinitions>
-							<ContentControl Content="{Binding LeftPanel}" >
-								<ContentControl.DataTemplates>
-                                    <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
-                                        <Border BorderBrush="Black"
-                                                BorderThickness="2"
-                                                Margin="2">
-                                            <TextBlock Text="{Binding Description}"
-                                                       Margin="5"
-                                                       FontSize="18"
-                                                       Foreground="Black" />
-                                        </Border>
-                                    </DataTemplate>
-                                </ContentControl.DataTemplates>
-                            </ContentControl>
-							<ContentControl Content="{Binding MiddlePanel}" Grid.Column="1" />
+							<ContentControl Content="{Binding LeftPanel}" Background="Green"/>
+							<ContentControl Content="{Binding MiddlePanel}" Grid.Column="1" Background="Blue" />
 						</Grid>
-						<ContentControl Content="{Binding FooterPanel}" Grid.Row="2" />
+						<ContentControl Content="{Binding FooterPanel}" Grid.Row="2" Background="Blue" />
 					</Grid>
 				</DataTemplate>
 
-                <DataTemplate DataType="{x:Type visualStates:BaseViewModel}">
-                    <Border BorderBrush="Black"
-                            BorderThickness="2"
-                            Margin="2">
-                        <TextBlock Text="{Binding Description}"
-                                   Margin="5"
-                                   FontSize="18"
-                                   Foreground="Black" />
-                    </Border>
-                </DataTemplate>
-
-
-                <DataTemplate DataType="{x:Type trial:TrialVersionLeftPanelViewModel}">
-					<Border BorderBrush="Black"
-							BorderThickness="2"
-							Margin="2">
-						<ListBox Items ="{Binding Features}">
-							<ListBox>
-								<DataTemplate DataType="{x:Type features:VpnFeatureViewModel}">
-									<TextBlock Text="{Binding Name}"
-											   Foreground="Red"
-											   IsEnabled="False"
-											   FontSize="20"/>
-								</DataTemplate>
-								<DataTemplate DataType="{x:Type features:FeatureViewModel}">
-									<TextBlock Text="{Binding Name}"
-											   FontSize="20"/>
-								</DataTemplate>
-							</ListBox>
-						</ListBox>
-					</Border>
-				</DataTemplate>
-
-                <DataTemplate DataType="{x:Type onboarding:OnboardingLayotViewModel}">
-                    <Grid Background="{Binding Background}"/>
-                </DataTemplate>
+               
 			</ContentControl.DataTemplates>
 		</ContentControl>
 	</Grid>
