@@ -8,4 +8,8 @@
     <ProjectReference Include="..\..\Guard.Infrastructure\Guard.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="State\" />
+  </ItemGroup>
+
 </Project>

@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guard.BL", "Guard.BL\Guard.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A9C5DC11-7398-46CD-8DC3-FB38D587B12E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard.Avalonia", "..\Guard.Avalonia\Guard.Avalonia.csproj", "{799A3D6E-0520-4B7A-8F38-BEDDAB06928F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guard.Avalonia", "..\Guard.Avalonia\Guard.Avalonia.csproj", "{799A3D6E-0520-4B7A-8F38-BEDDAB06928F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,14 +68,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{694A15B8-EA78-4198-AD78-682E71A72B69} = {A9C5DC11-7398-46CD-8DC3-FB38D587B12E}
-		{869252FA-4FE0-4576-AE38-3D2BA4D1D37B} = {4548D50F-60E6-4309-946A-6D486D7E9BE0}
-		{01E31E16-6E96-47A4-92A4-200518BB6E0B} = {2A99DD87-F17A-4810-9926-07B8DF9ADC7B}
-		{071157F1-BB0D-4711-9BBE-D38D76BB3090} = {2A99DD87-F17A-4810-9926-07B8DF9ADC7B}
-		{7BC2DDD1-7CDB-49B5-BFB9-AEE74B1E4574} = {7F42251B-DE58-4FEC-B9F7-0E54A39CE32B}
-		{27C1B605-21DC-4A53-B935-83E8418DDD71} = {7F42251B-DE58-4FEC-B9F7-0E54A39CE32B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2EBFA1E1-0F95-452E-9922-E59E79E52A18}
