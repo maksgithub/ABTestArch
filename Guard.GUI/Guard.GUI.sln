@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{7F42251B-DE58-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guard.Models", "Guard.Models\Guard.Models.csproj", "{7BC2DDD1-7CDB-49B5-BFB9-AEE74B1E4574}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", "{4548D50F-60E6-4309-946A-6D486D7E9BE0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guard.BL", "Guard.BL\Guard.BL.csproj", "{27C1B605-21DC-4A53-B935-83E8418DDD71}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A9C5DC11-7398-46CD-8DC3-FB38D587B12E}"
@@ -32,8 +30,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SplitTests.UI", "SplitTests.UI", "{58E2FBC0-3D82-4C21-A71B-3AE9B619BE49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Split.DataTemplates", "LoginFullVersion.DataTemplates\Split.DataTemplates.csproj", "{7614D8B1-EED7-41D4-AE93-A19C4C6B9B74}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard.ViewModels", "Guard.ViewModels\Guard.ViewModels.csproj", "{9AC6A718-66D4-42C9-88B2-A53C131FA46D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,10 +73,6 @@ Global
 		{7614D8B1-EED7-41D4-AE93-A19C4C6B9B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7614D8B1-EED7-41D4-AE93-A19C4C6B9B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7614D8B1-EED7-41D4-AE93-A19C4C6B9B74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9AC6A718-66D4-42C9-88B2-A53C131FA46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AC6A718-66D4-42C9-88B2-A53C131FA46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AC6A718-66D4-42C9-88B2-A53C131FA46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AC6A718-66D4-42C9-88B2-A53C131FA46D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,7 +82,6 @@ Global
 		{428A0DF5-1E85-4D73-8AE3-E8CDD69E36A3} = {E9D11891-0396-4089-9793-FA3EE2F78888}
 		{446847F0-5CB2-4431-996A-E57AD4F1E58C} = {E9D11891-0396-4089-9793-FA3EE2F78888}
 		{7614D8B1-EED7-41D4-AE93-A19C4C6B9B74} = {58E2FBC0-3D82-4C21-A71B-3AE9B619BE49}
-		{9AC6A718-66D4-42C9-88B2-A53C131FA46D} = {4548D50F-60E6-4309-946A-6D486D7E9BE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2EBFA1E1-0F95-452E-9922-E59E79E52A18}
